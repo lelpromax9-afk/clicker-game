@@ -1,0 +1,46 @@
+body {
+  background: #0b0b0b;
+  color: white;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#bravo {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: gold;
+}
+
+#indispo {
+  display: none;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+  color: red;
+  font-weight: bold;
+}
+
+#prestigePanel {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1b1b1b;
+  padding: 25px;
+  border: 2px solid gold;
+}
