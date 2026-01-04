@@ -184,6 +184,8 @@ function showIndispo() {
 // =====================
 // START
 // =====================
+updateUI();saveGame();
+
 function saveGame() {
   const data = {
     score,
@@ -197,4 +199,20 @@ function saveGame() {
   };
   localStorage.setItem("clickerSave", JSON.stringify(data));
 }
+function loadGame() {
+  const save = localStorage.getItem("clickerSave");
+  if (!save) return;
+
+  const data = JSON.parse(save);
+
+  score = data.score ?? 0;
+  clickPower = data.clickPower ?? 1;
+  upgradePrice = data.upgradePrice ?? 10;
+  totalClicks = data.totalClicks ?? 0;
+  prestigeCount = data.prestigeCount ?? 0;
+  prestigeMultiplier = data.prestigeMultiplier ?? 1;
+  autoClickStarted = data.autoClickStarted ?? false;
+  bonus2500Applied = data.bonus2500Applied ?? false;
+}
+loadGame();
 updateUI();
