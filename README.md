@@ -1,1 +1,1 @@
-# clicker-game
+# cli
